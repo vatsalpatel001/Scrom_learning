@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Vat Scrom Learning Html to scrom</title>
+  <link rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css'>
+<style type="text/css">
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  background-color: #222222;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+}
+
+h2 {
+  color: white;
+  font-family: "Pacifico";
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-family: "Open Sans";
+  font-size: 10px;
+  margin: 0;
+}
+
+.custom-swiper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-custom-prev,
+.swiper-button-custom-next {
+  padding: 1em;
+  cursor: pointer;
+  color: white;
+  opacity: 0.4;
+  transition: 0.1s;
+  user-select: none;
+}
+
+.swiper-button-custom-prev:hover,
+.swiper-button-custom-next:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.swiper-custom-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em 0;
+}
+.swiper-custom-pagination .swiper-pagination-bullet {
+  width: 1em;
+  height: 1em;
+  border-radius: 0;
+  display: grid;
+  place-items: center;
+  color: white;
+  padding: 0.15em;
+  font-family: "Josefin Sans", sans-serif;
+  user-select: none;
+}
+.swiper-custom-pagination .swiper-pagination-bullet-active {
+  background-image: linear-gradient(135deg, #36d1dc 50%, #5b86e5 50%);
+  box-shadow: 5px 5px 2px black;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.swiper {
+  width: 80vw;
+  height: 80vh;
+  box-shadow: 10px 10px 5px black;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(-45deg, #36d1dc, #5b86e5);
+  color: white;
+  font-size: 5em;
+  font-family: "Josefin Sans", sans-serif;
+}
+.swiper-slide img{
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+</style>
+
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div>
+  <h2>HTML to Scrom</h2>
+</div>
+<div class="custom-swiper">
+  <div class="custom-swiper-wrapper">
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-custom-prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" transform="rotate(-90)">
+        <path fill="white" d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z" />
+      </svg></div>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="./Assets/1.Slides/Slide1.PNG" /></div>
+        <div class="swiper-slide"><img src="./Assets/1.Slides/Slide2.PNG" /></div>
+        <div class="swiper-slide"><img src="./Assets/1.Slides/Slide3.PNG" /></div>
+        <div class="swiper-slide"><img src="./Assets/1.Slides/Slide4.PNG" /></div>
+        <div class="swiper-slide"><img src="./Assets/1.Slides/Slide5.PNG" /></div>
+        <div class="swiper-slide"><img src="./Assets/1.Slides/Slide6.PNG" /></div>
+        <div class="swiper-slide"><img src="./Assets/1.Slides/Slide7.PNG" /></div>
+        <div class="swiper-slide"><img src="./Assets/1.Slides/Slide8.PNG" /></div>
+        <div class="swiper-slide"><img src="./Assets/1.Slides/Slide9.PNG" /></div>
+        <div class="swiper-slide"><img src="./Assets/1.Slides/Slide10.PNG" /></div>
+      </div>
+    </div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-custom-next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" transform="rotate(90)">
+        <path fill="white" d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z" />
+      </svg></div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-custom-pagination"></div>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/swiper@7/swiper-bundle.min.js'></script>
+<script type="text/javascript">
+  const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  loop: true,
+  spaceBetween: 50,
+  // If we need pagination
+  pagination: {
+    el: ".swiper-custom-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return `<span class=${className}>${index+1}</span>`;
+    },
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-custom-next",
+    prevEl: ".swiper-button-custom-prev"
+  }
+});
+</script>
+
+</body>
+</html>
